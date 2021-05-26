@@ -4,67 +4,100 @@
 <title>轉蛋</title>
 </head>
 <style>
+html, body {
+    height: 100%; width: 100%;
+    padding: 0; margin: 0;
+}
+
 body{
-    background-image: url("bg.png");
-    background-repeat: no-repeat;
+    background: #FFF url("bg2.png") no-repeat bottom center;
 }
 
 #sad{
-    position: fixed;
-    width: 250px;
-    height: 100px;
-    top: 80%;
-    left: 50%;
-    margin-top: -100px; /* Negative half of height. */
-    margin-left: -250px; /* Negative half of width. */
+    background:linear-gradient(to bottom, #eae0c2 5%, #ebe7dd 100%);
+	background-color:#eae0c2;
+	border-radius:4px;
+	border:2px solid #b0aeaa;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Courier New;
+	font-size:5.5vw;
+	font-weight:bold;
+	padding:15px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right:60%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #sad5c{
-    position: fixed;
-    width: 250px;
-    height: 100px;
-    top: 80%;
-    left: 80%;
-    margin-top: -100px; /* Negative half of height. */
-    margin-left: -250px; /* Negative half of width. */
+    background:linear-gradient(to bottom, #eae0c2 5%, #ebe7dd 100%);
+	background-color:#eae0c2;
+	border-radius:4px;
+	border:2px solid #b0aeaa;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Courier New;
+	font-size:5.5vw;
+	font-weight:bold;
+	padding:15px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right:5%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 p{
-    font-size: 25px;
+    font-size: 5.5vw;
     color: red;
     top: 80%;
-    width:200px;
-    background: rgba(0,0,0);
+    width:500px;
+    background: rgba(0,0,0,0.5);
     
 }
 
 
 </style>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
 <body>
 
-<button id="sad">招募 1 次</button>
+<div>
+    <button id="sad">招募 1 次</button>
 
-<button id="sad5c">招募 5 次</button>
+    <button id="sad5c">招募 5 次</button>
+</div>
 
 <div id="countBox">
     <p>系統由<br> S145- 太公家軒提供</p>
     <p>次數: <span id="drawCount">0</span></p>
-    <p>消費: <span id="paidCount">0</span>
-    <p>中獎次數: <span id="hitRate">0</span>
-    <p>中左咩: <span id="goodStuff"></span 
+    <p>消費: <span id="paidCount">0</span></p>
+    <p>中獎次數: <span id="hitRate">0</span></p>
+    <p>獲得將領: <span id="goodStuff"></span> </p>
 </div>
 
 
 </body>
+
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
   <script src="sa2.js"></script>
