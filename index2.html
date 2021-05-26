@@ -4,101 +4,67 @@
 <title>轉蛋</title>
 </head>
 <style>
-html, body {
-    height: 100%; width: 100%;
-    padding: 0; margin: 0;
-}
-
 body{
-    background: #FFF url("bg2.png") no-repeat bottom center;
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
 }
 
 #sad{
-    background:linear-gradient(to bottom, #eae0c2 5%, #ebe7dd 100%);
-	background-color:#eae0c2;
-	border-radius:4px;
-	border:2px solid #b0aeaa;
-	display:inline-block;
-	cursor:pointer;
-	color:#505739;
-	font-family:Courier New;
-	font-size:5.5vw;
-	font-weight:bold;
-	padding:15px 44px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-    margin: 0;
-    position: absolute;
-    top: 70%;
-    right:60%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    position: fixed;
+    width: 250px;
+    height: 100px;
+    top: 80%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
 }
 
 #sad5c{
-    background:linear-gradient(to bottom, #eae0c2 5%, #ebe7dd 100%);
-	background-color:#eae0c2;
-	border-radius:4px;
-	border:2px solid #b0aeaa;
-	display:inline-block;
-	cursor:pointer;
-	color:#505739;
-	font-family:Courier New;
-	font-size:5.5vw;
-	font-weight:bold;
-	padding:15px 44px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-    margin: 0;
-    position: absolute;
-    top: 70%;
-    right:5%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    position: fixed;
+    width: 250px;
+    height: 100px;
+    top: 80%;
+    left: 80%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
 }
 
 p{
-    font-size: 5.5vw;
+    font-size: 25px;
     color: red;
     top: 80%;
-    width:500px;
-    background: rgba(0,0,0,0.5);
+    width:200px;
+    background: rgba(0,0,0);
     
 }
 
 
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
 <body>
 
-<div>
-    <button id="sad">招募 1 次</button>
+<button id="sad">招募 1 次</button>
 
-    <button id="sad5c">招募 5 次</button>
-</div>
+<button id="sad5c">招募 5 次</button>
 
 <div id="countBox">
     <p>系統由<br> S145- 太公家軒提供</p>
     <p>次數: <span id="drawCount">0</span></p>
-    <p>消費: <span id="paidCount">0</span></p>
-    <p>中獎次數: <span id="hitRate">0</span></p>
-    <p>距離保底: <span id="guaranteed">0</span></p> 
-    <p>獲得將領: <span id="goodStuff"></span> </p>
+    <p>消費: <span id="paidCount">0</span>
+    <p>中獎次數: <span id="hitRate">0</span>
+    <p>中左咩: <span id="goodStuff"></span 
 </div>
 
 
 </body>
-
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
   <script src="sa2.js"></script>
@@ -108,7 +74,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     let newnum
     let newnum1, newnum2, newnum3, newnum4, newnum5
 
-    let guaranteed = 0
+
     let paid = 0
     let times = 0
     let hitRate = 0
@@ -119,6 +85,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     }
 
     $( "#sad" ).click(function() {
+
+
        //step 1
        firstRound = getRandomInt(100);
        console.log(firstRound)
@@ -133,12 +101,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
             paid += 198
             times += 1
-            guaranteed += 1
-
             $("#drawCount").html(times)
             $("#paidCount").html(paid)
             $("#hitRate").html(hitRate)
-            $("#guaranteed").html(guaranteed)
 
         }else{
             Swal.fire({
@@ -147,12 +112,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
             paid += 198
             times += 1
-            guaranteed += 1
-
             $("#drawCount").html(times)
             $("#paidCount").html(paid)
             $("#hitRate").html(hitRate)
-            $("#guaranteed").html(guaranteed)
         }
 
         /*newnum = getRandomInt(256);
@@ -194,48 +156,28 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     })
 
     $( "#sad5c" ).click(function() {
+
+
+        
         newnum1 = getRandomInt(100);
         newnum2 = getRandomInt(100);
         newnum3 = getRandomInt(100);
         newnum4 = getRandomInt(100);
         newnum5 = getRandomInt(100);
 
-        if(guaranteed >= 25){
+        if(newnum1 <= 6 || newnum2 <= 6 || newnum3 <= 6 || newnum4 <= 6|| newnum5 <= 6){
             secondRound5();
-            guaranteed -= guaranteed
+        }
+        else{
+            Swal.fire({
+                title: '唔中',
+            })
 
             paid += 948
             times += 5
-
             $("#drawCount").html(times)
             $("#paidCount").html(paid)
             $("#hitRate").html(hitRate)
-            $("#guaranteed").html(guaranteed)
-
-        }else{
-            if(newnum1 <= 6 || newnum2 <= 6 || newnum3 <= 6 || newnum4 <= 6|| newnum5 <= 6){
-                secondRound5();
-            }
-            else{
-                Swal.fire({
-                    title: '恭喜獲取二星垃圾',
-                })
-
-                paid += 948
-                times += 5
-
-                if(guaranteed >= 29){
-                    guaranteed -= 29
-                }else{
-                    guaranteed += 5
-                }
-
-                $("#drawCount").html(times)
-                $("#paidCount").html(paid)
-                $("#hitRate").html(hitRate)
-                $("#guaranteed").html(guaranteed)
-
-            }
         }
         
     })
@@ -281,14 +223,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         const final = (random, array[random])
 
         Swal.fire({
-                title: '恭喜獲取五星!' + final
+                title: '抽中左5星!' + final
                 //imageUrl: 'chiu.jpeg',
             })
 
             paid += 948
             times += 5
             hitRate += 1
-            guaranteed += 5
 
             goodStuff = goodStuff + final + "，"
 
@@ -296,7 +237,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             $("#paidCount").html(paid)
             $("#hitRate").html(hitRate)
             $("#goodStuff").html(goodStuff)
-            $("#guaranteed").html(guaranteed)
     }
 </script>
 </html>
