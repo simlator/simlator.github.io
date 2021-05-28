@@ -102,8 +102,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
 <script>
     let chiuWu = 134
-    let newnum
     let newnum1, newnum2, newnum3, newnum4, newnum5
+
+    let secnewnum
 
     let guaranteed = 0
     let paid = 0
@@ -240,14 +241,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
     function secondRound(){
 
-        let array = ["黃月英", "劉備", "關羽", "張飛","周瑜","陸遜","徐晃","許褚","程昱",
-        "夏侯惇","祝融","呂布","張角","馬超","黃忠","夏侯淵","孫權","樂進","太史慈","徐庶",
-        "董卓","華佗","呂蒙","甘寧","曹仁","典韋","呂玲奇","鍾會","郭嘉", "諸葛亮", "龐統",
-        "孫尚香","張遼", "司馬懿", "陳宮", "華佗","法正","公孫讚","曹仁","高順","陳群","張郃",
-        "龐德","孟獲","王平","陳到","孫策","孫堅","其他垃圾"]
+        let seiesOne = [
+            "劉備", "關羽","張飛","周瑜","陸遜",
+            "夏侯惇","諸葛亮", "龐統","郭嘉","孫權"
+            ,"司馬懿","曹操","趙雲","呂布"
+        ]
 
-        const random = Math.floor(Math.random() * array.length);
-        const final = (random, array[random])
+        let seiesTwo = [
+            "黃月英","祝融夫人","張角","夏侯淵","樂進","太史慈","徐庶",
+            "呂蒙","甘寧","典韋","呂玲奇","徐晃","許褚","程昱","馬超","黃忠","張遼"
+        ]
+
+        let seriesThree = [
+            "董卓","華佗","呂蒙","甘寧","典韋","呂玲奇","鍾會",
+            "孫尚香","張遼", "司馬懿", "陳宮", "華佗","法正","公孫讚","曹仁","高順","張郃"
+            ,"程普","左慈","于吉"
+        ]
+
+        let seriesFour = [
+            "龐德","孟獲","王平","陳到","孫策","孫堅","黃蓋",
+            "曹仁","高順","張郃","程普",
+            "陳群","孫堅","荀彧","小喬","張昭","張弘","曹丕","曹植","司马徽","甄姬","大喬","孫策","兀突骨"
+        ]
+
+
+        console.log("sad")
+
+        secnewnum = getRandomInt(100);
+        console.log("sad1")
+
+        let random;
+        let final;
+        
+        if (secnewnum <= 8){
+            random = Math.floor(Math.random() * seiesOne.length);
+            final = (random, seiesOne[random])
+        }
+        if (secnewnum > 8 && secnewnum <= 10){
+            random = Math.floor(Math.random() * seiesTwo.length);
+            final = (random, seiesTwo[random])
+        }
+        if (secnewnum > 10 && secnewnum <= 45){
+            random = Math.floor(Math.random() * seriesThree.length);
+            final = (random, seriesFour[random])
+        }
+        if (secnewnum > 45 && secnewnum <= 100){
+            random = Math.floor(Math.random() * seriesFour.length);
+            final = (random, seriesFour[random])
+        }
 
         Swal.fire({
                 title: '恭喜獲取五星!' + final
@@ -268,14 +309,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
     function secondRound5(){
 
-        let array = ["黃月英", "劉備", "關羽", "張飛","周瑜","陸遜","徐晃","許褚","程昱",
-        "夏侯惇","祝融","呂布","張角","馬超","黃忠","夏侯淵","孫權","樂進","太史慈","徐庶",
-        "董卓","華佗","呂蒙","甘寧","曹仁","典韋","呂玲奇","鍾會","郭嘉", "諸葛亮", "龐統",
-        "孫尚香","張遼", "司馬懿", "陳宮", "華佗","法正","公孫讚","曹仁","高順","陳群","張郃",
-        "龐德","孟獲","王平","陳到","孫策","孫堅","其他垃圾"]
+        let seiesOne = [
+            "劉備", "關羽","張飛","周瑜","陸遜",
+            "夏侯惇","諸葛亮", "龐統","郭嘉","孫權"
+            ,"司馬懿","曹操","趙雲","呂布"
+        ]
 
-        const random = Math.floor(Math.random() * array.length);
-        const final = (random, array[random])
+        let seiesTwo = [
+            "黃月英","祝融夫人","張角","夏侯淵","樂進","太史慈","徐庶",
+            "呂蒙","甘寧","典韋","呂玲奇","徐晃","許褚","程昱","馬超","黃忠","張遼"
+        ]
+
+        let seriesThree = [
+            "董卓","華佗","呂蒙","甘寧","典韋","呂玲奇","鍾會",
+            "孫尚香","張遼", "司馬懿", "陳宮", "華佗","法正","公孫讚","曹仁","高順","張郃"
+            ,"程普","左慈","于吉"
+        ]
+
+        let seriesFour = [
+            "龐德","孟獲","王平","陳到","孫策","孫堅","黃蓋",
+            "曹仁","高順","張郃","程普",
+            "陳群","孫堅","荀彧","小喬","張昭","張弘","曹丕","曹植","司马徽","甄姬","大喬","孫策","兀突骨"
+        ]
+
+
+        console.log("sad")
+
+        secnewnum = getRandomInt(100);
+        console.log("sad1")
+
+        let random;
+        let final;
+        
+        if (secnewnum <= 8){
+            random = Math.floor(Math.random() * seiesOne.length);
+            final = (random, seiesOne[random])
+        }
+        if (secnewnum > 8 && secnewnum <= 10){
+            random = Math.floor(Math.random() * seiesTwo.length);
+            final = (random, seiesTwo[random])
+        }
+        if (secnewnum > 10 && secnewnum <= 45){
+            random = Math.floor(Math.random() * seriesThree.length);
+            final = (random, seriesFour[random])
+        }
+        if (secnewnum > 45 && secnewnum <= 100){
+            random = Math.floor(Math.random() * seriesFour.length);
+            final = (random, seriesFour[random])
+        }
 
         Swal.fire({
                 title: '恭喜獲取五星!' + final
@@ -285,7 +366,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             paid += 948
             times += 5
             hitRate += 1
-            guaranteed += 5
+            guaranteed -= guaranteed
 
             goodStuff = goodStuff + final + "，"
 
@@ -295,5 +376,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             $("#goodStuff").html(goodStuff)
             $("#guaranteed").html(guaranteed)
     }
+
+
 </script>
 </html>
