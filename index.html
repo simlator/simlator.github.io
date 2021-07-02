@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>轉蛋</title>
+<title>轉蛋|S145- 太公家軒提供</title>
 <script data-ad-client="ca-pub-1977829157783028" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <style>
@@ -75,12 +75,16 @@ rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
 <body>
+<!--S145 S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供 -->
 
 <div>
     <button id="sad">招募 1 次</button>
+<!--S145 S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供 -->
 
     <button id="sad5c">招募 5 次</button>
 </div>
+<!--S145 S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供 -->
+<!--S145 S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供 -->
 
 <div id="countBox">
     <p>系統由<br> S145- 太公家軒提供 <br/> 增援一下作者的戰友集結令:FOPGWZZFRVHE</p>
@@ -90,6 +94,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <p>距離保底: <span id="guaranteed">0</span></p> 
     <p>獲得將領: <span id="goodStuff"></span> </p>
 </div>
+<!--S145 S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供 -->
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 小廣告 -->
@@ -103,6 +108,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </body>
+<!--S145 S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供S145- 太公家軒提供 -->
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
@@ -113,9 +119,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
   <script src="sa2.js"></script>
-
-<script>
-      let chiuWu = 134
+  <script>
+    let chiuWu = 134
     let newnum1, newnum2, newnum3, newnum4, newnum5
 
     let secnewnum
@@ -133,38 +138,43 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     $( "#sad" ).click(function() {
        //step 1
        firstRound = getRandomInt(100);
-       console.log(firstRound)
-        if(firstRound <= 6){
 
-            secondRound();
+       if(guaranteed >= 25){
+                    secondRound5();
+                    guaranteed -= guaranteed
 
-        }else if(firstRound > 7 && firstRound <=36){
-            Swal.fire({
-                title: '4星',
-            })
+                    paid += 948
+                    times += 1
 
-            paid += 198
-            times += 1
-            guaranteed += 1
-
-            $("#drawCount").html(times)
-            $("#paidCount").html(paid)
-            $("#hitRate").html(hitRate)
-            $("#guaranteed").html(guaranteed)
+                    $("#drawCount").html(times)
+                    $("#paidCount").html(paid)
+                    $("#hitRate").html(hitRate)
+                    $("#guaranteed").html(guaranteed)
 
         }else{
-            Swal.fire({
-                title: '3星',
-            })
+            if(firstRound <= 6){
+                secondRound();
+            }
+            else{
+                Swal.fire({
+                    title: '恭喜獲取二星垃圾',
+                })
 
-            paid += 198
-            times += 1
-            guaranteed += 1
+                paid += 198
+                times += 1
 
-            $("#drawCount").html(times)
-            $("#paidCount").html(paid)
-            $("#hitRate").html(hitRate)
-            $("#guaranteed").html(guaranteed)
+                if(guaranteed >= 29){
+                    guaranteed -= 29
+                }else{
+                    guaranteed += 1
+                }
+
+                $("#drawCount").html(times)
+                $("#paidCount").html(paid)
+                $("#hitRate").html(hitRate)
+                $("#guaranteed").html(guaranteed)
+
+            }
         }
 
         /*newnum = getRandomInt(256);
@@ -206,51 +216,51 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     })
 
     $( "#sad5c" ).click(function() {
-        newnum1 = getRandomInt(100);
-        newnum2 = getRandomInt(100);
-        newnum3 = getRandomInt(100);
-        newnum4 = getRandomInt(100);
-        newnum5 = getRandomInt(100);
+        for(let i = 0; i < 5; i++) {
 
-        if(guaranteed >= 25){
-            secondRound5();
-            guaranteed -= guaranteed
+            let attempt = getRandomInt(100);
 
-            paid += 948
-            times += 5
+            console.log(attempt)
 
-            $("#drawCount").html(times)
-            $("#paidCount").html(paid)
-            $("#hitRate").html(hitRate)
-            $("#guaranteed").html(guaranteed)
+            if(guaranteed >= 25){
+                    secondRound5();
+                    guaranteed -= guaranteed
 
-        }else{
-            if(newnum1 <= 6 || newnum2 <= 6 || newnum3 <= 6 || newnum4 <= 6|| newnum5 <= 6){
-                secondRound5();
-            }
-            else{
-                Swal.fire({
-                    title: '恭喜獲取二星垃圾',
-                })
+                    paid += 948
+                    times += 1
 
-                paid += 948
-                times += 5
+                    $("#drawCount").html(times)
+                    $("#paidCount").html(paid)
+                    $("#hitRate").html(hitRate)
+                    $("#guaranteed").html(guaranteed)
 
-                if(guaranteed >= 29){
-                    guaranteed -= 29
                 }else{
-                    guaranteed += 5
+                    if(attempt <= 6){
+                        secondRound5();
+                    }
+                    else{
+                        Swal.fire({
+                            title: '恭喜獲取二星垃圾',
+                        })
+
+                        paid += 948
+                        times += 1
+
+                        if(guaranteed >= 29){
+                            guaranteed -= 29
+                        }else{
+                            guaranteed += 1
+                        }
+
+                        $("#drawCount").html(times)
+                        $("#paidCount").html(paid)
+                        $("#hitRate").html(hitRate)
+                        $("#guaranteed").html(guaranteed)
+
+                    }
                 }
-
-                $("#drawCount").html(times)
-                $("#paidCount").html(paid)
-                $("#hitRate").html(hitRate)
-                $("#guaranteed").html(guaranteed)
-
             }
-        }
-        
-    })
+        });
 
 
     function secondRound(){
@@ -258,12 +268,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         let seiesOne = [
             "劉備", "關羽","張飛","周瑜","陸遜",
             "夏侯惇","諸葛亮", "龐統","郭嘉","孫權"
-            ,"司馬懿","曹操","趙雲","呂布"
+            ,"司馬懿","曹操","趙雲","呂布",
+            "魯肅", "郝昭", "賈詡"
         ]
 
         let seiesTwo = [
             "黃月英","祝融夫人","張角","夏侯淵","樂進","太史慈","徐庶",
-            "呂蒙","甘寧","典韋","呂玲奇","徐晃","許褚","程昱","馬超","黃忠","張遼"
+            "呂蒙","甘寧","典韋","呂玲奇","徐晃","許褚","程昱","馬超","黃忠","張遼",
+            "凌統","木鹿大王"
         ]
 
         let seriesThree = [
@@ -275,9 +287,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         let seriesFour = [
             "龐德","孟獲","王平","陳到","孫策","孫堅","黃蓋",
             "曹仁","高順","張郃","程普",
-            "陳群","孫堅","荀彧","小喬","張昭","張弘","曹丕","曹植","司马徽","甄姬","大喬","孫策","兀突骨"
+            "陳群","孫堅","荀彧","小喬","張昭","張弘","曹丕","曹植","司马徽","甄姬","大喬","孫策","兀突骨", "蔣琬" 
         ]
-
 
         console.log("sad")
 
@@ -309,6 +320,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 //imageUrl: 'chiu.jpeg',
             })
 
+            guaranteed -= guaranteed
             paid += 198
             times += 1
             hitRate += 1
@@ -319,6 +331,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             $("#paidCount").html(paid)
             $("#hitRate").html(hitRate)
             $("#goodStuff").html(goodStuff)
+            $("#guaranteed").html(guaranteed)
     }
 
     function secondRound5(){
@@ -326,12 +339,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         let seiesOne = [
             "劉備", "關羽","張飛","周瑜","陸遜",
             "夏侯惇","諸葛亮", "龐統","郭嘉","孫權"
-            ,"司馬懿","曹操","趙雲","呂布"
+            ,"司馬懿","曹操","趙雲","呂布",
+            "魯肅", "郝昭", "賈詡"
         ]
 
         let seiesTwo = [
             "黃月英","祝融夫人","張角","夏侯淵","樂進","太史慈","徐庶",
-            "呂蒙","甘寧","典韋","呂玲奇","徐晃","許褚","程昱","馬超","黃忠","張遼"
+            "呂蒙","甘寧","典韋","呂玲奇","徐晃","許褚","程昱","馬超","黃忠","張遼",
+            "凌統","木鹿大王"
         ]
 
         let seriesThree = [
@@ -343,7 +358,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         let seriesFour = [
             "龐德","孟獲","王平","陳到","孫策","孫堅","黃蓋",
             "曹仁","高順","張郃","程普",
-            "陳群","孫堅","荀彧","小喬","張昭","張弘","曹丕","曹植","司马徽","甄姬","大喬","孫策","兀突骨"
+            "陳群","孫堅","荀彧","小喬","張昭","張弘","曹丕","曹植","司马徽","甄姬","大喬","孫策","兀突骨", "蔣琬" 
         ]
 
 
@@ -377,8 +392,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 //imageUrl: 'chiu.jpeg',
             })
 
-            paid += 948
-            times += 5
+            paid += 190
+            times += 1
             hitRate += 1
             guaranteed -= guaranteed
 
@@ -390,5 +405,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             $("#goodStuff").html(goodStuff)
             $("#guaranteed").html(guaranteed)
     }
+
+
 </script>
 </html>
